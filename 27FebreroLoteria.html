@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loteria</title>
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        #carta{
+            margin: 20px auto;
+        }
+        #cartaimagen{
+            width: 50px;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Cartas de Loteria</h1>
+    <div id="carta"></div>
+    <img id="cartaImagen" src="rosa.JPG" alt="Carta de Loteria">
+</div>
+<button onclick="nuevaCarta()">Cambiar Carta</button>
+
+<script>
+    const cartas = [
+    "nopal.jpg", "rosa.jpg", "estrella.jpg", "valiente.jpg","dama.jpg", "gallo.jpg","diablo.jpg",
+    "catrin.jpg","arbol.jpg","barril.jpg","escalera.jpg","corona.jpg"
+    ];
+    function nuevaCarta(){
+        const cartaImagen=document.getElementById('cartaImagen');
+        const randomIndex = Math.floor(Math.random()*cartas.length);
+        cartaImagen.src=cartas[randomIndex];
+    }
+</script>
+</body>
+</html>
